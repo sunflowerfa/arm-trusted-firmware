@@ -113,9 +113,9 @@ void mtk_pll_init(int skip_dcm_setting)
 	/* Set PLL frequency */
 	/* please change Vproc to 900mv via i2c */
 
-	#ifdef CPU_USE_FULL_SPEED
-    INFO("ARMPLL_B_CON1 = 0x%x\n", 0xD2000000);  /* 2.1G */
-    mmio_write_32(ARMPLL_B_CON1, 0xD2000000);    /* 2.1G */
+#ifdef CPU_USE_FULL_SPEED
+    INFO("ARMPLL_B_CON1 = 0x%x\n", 0xD8000000);  /* 2.4G */
+    mmio_write_32(ARMPLL_B_CON1, 0xD8000000);    /* 2.4G */
 #else
     INFO("ARMPLL_B_CON1 = 0x%x\n", 0xB4000000);  /* 1.8G */
     mmio_write_32(ARMPLL_B_CON1, 0xB4000000);    /* 1.8G */
