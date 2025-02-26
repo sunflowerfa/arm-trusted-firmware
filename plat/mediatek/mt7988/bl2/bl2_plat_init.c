@@ -100,7 +100,7 @@ static void mt7988_i2c_init(void)
 	mtk_i2c_init();
 	mt6682a_init();
 #ifdef CPU_USE_FULL_SPEED
-	mt6682a_set_voltage(REGULATOR_BUCK3, 1100000, 1100000);
+	mt6682a_set_voltage(REGULATOR_BUCK3, 1200000, 1200000);
 #endif
 #endif
 }
